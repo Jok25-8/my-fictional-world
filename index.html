@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Fiction World</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating decorations -->
+    <div class="doodle star1">★</div>
+    <div class="doodle star2">✦</div>
+    <div class="doodle heart">♥</div>
+    <div class="doodle sparkle">✧</div>
+
+    <!-- TOP -->
+    <header>
+
+        <div class="tiny-top">
+            ★ welcome to my little corner of the internet ★
+        </div>
+
+        <h1>MY FICTION WORLD</h1>
+
+        <p class="subtitle">
+            anime • manga • games • movies • shows • things that live rent-free in my head
+        </p>
+
+        <div class="sticker sticker1">★ COOL STUFF ★</div>
+        <div class="sticker sticker2">EST. 2026</div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+
+        <button onclick="showSection('home')">HOME</button>
+        <button onclick="showSection('favorites')">MY FAVORITES</button>
+        <button onclick="showSection('collection')">COLLECTION</button>
+        <button onclick="showSection('about')">ABOUT</button>
+
+    </nav>
+
+
+    <!-- HOME -->
+    <main id="home">
+
+        <section class="welcome-box">
+
+            <div class="welcome-text">
+
+                <h2>WELCOME!!! ☆</h2>
+
+                <p>
+                    This is my personal collection of fictional worlds
+                    that I got way too attached to.
+                </p>
+
+                <p>
+                    Some are funny. Some are horrifying.
+                    Some will emotionally destroy me.
+                </p>
+
+                <p class="small-note">
+                    basically: stuff I like :)
+                </p>
+
+            </div>
+
+            <div class="welcome-drawing">
+                ☆<br>
+                <span>✦</span> ☆ <span>✦</span>
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+        <section class="search-area">
+
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="🔎 Search my collection..."
+                onkeyup="searchItems()"
+            >
+
+        </section>
+
+
+        <!-- CATEGORY BUTTONS -->
+        <section class="categories">
+
+            <button onclick="filterItems('all')">EVERYTHING</button>
+            <button onclick="filterItems('anime')">ANIME</button>
+            <button onclick="filterItems('manga')">MANGA</button>
+            <button onclick="filterItems('games')">GAMES</button>
+            <button onclick="filterItems('shows')">SHOWS</button>
+            <button onclick="filterItems('movies')">MOVIES</button>
+
+        </section>
+
+
+        <!-- COLLECTION -->
+        <section>
+
+            <div id="collectionGrid" class="collection-grid">
+                <!-- JavaScript puts cards here -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FAVORITES -->
+    <section id="favorites" class="hidden-page">
+
+        <div class="page-box">
+
+            <h2>★ MY FAVORITES ★</h2>
+
+            <p>
+                The stuff that occupies approximately 87% of my brain.
+            </p>
+
+            <div class="favorite-list">
+
+                <div>📺 Monster</div>
+                <div>🩸 Higurashi When They Cry</div>
+                <div>🛸 Rick and Morty</div>
+                <div>⚔️ Berserk</div>
+                <div>📖 20th Century Boys</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+    <section id="collection" class="hidden-page">
+
+        <div class="page-box">
+
+            <h2>📚 THE COLLECTION</h2>
+
+            <p>
+                Everything I'm watching, reading, playing,
+                or planning to get obsessed with.
+            </p>
+
+            <p class="old-web-text">
+                More stuff will be added here...
+                probably way too much stuff.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="hidden-page">
+
+        <div class="page-box">
+
+            <h2>☁ ABOUT THIS PLACE ☁</h2>
+
+            <p>
+                Welcome to my weird little corner of the internet.
+            </p>
+
+            <p>
+                I like anime, manga, games, fictional stories,
+                Japanese stuff, space, and randomly getting
+                obsessed with something for several weeks.
+            </p>
+
+            <p>
+                This website is basically a digital scrapbook
+                for all of it.
+            </p>
+
+            <div class="about-stickers">
+
+                <span>🎌 JAPAN</span>
+                <span>🚀 SPACE</span>
+                <span>♟ CHESS</span>
+                <span>📚 MANGA</span>
+                <span>🎮 GAMES</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeModal()">X</button>
+
+            <img id="modalImage" src="" alt="">
+
+            <div class="modal-info">
+
+                <p id="modalType"></p>
+
+                <h2 id="modalTitle"></h2>
+
+                <div id="modalRating"></div>
+
+                <p id="modalDescription"></p>
+
+                <div class="thought-box">
+
+                    <h3>💭 MY THOUGHTS</h3>
+
+                    <p id="modalThoughts"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>★ thanks for visiting my little website ★</p>
+
+        <p class="updated">
+            Last updated: 2026
+        </p>
+
+        <div class="footer-stars">
+            ★ ☆ ★ ☆ ★
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
